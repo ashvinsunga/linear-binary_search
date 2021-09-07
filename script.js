@@ -1,11 +1,6 @@
 // THE GOAL OF THIS FUNCTION
-// Function accepts sorted array of integers and a number
+// Function accepts sorted array and a number
 // Returns the index of a value from array that matches the number
-// Divide and Conquer approach is suggested when dealing with larger set of data
-// If you are given a large set of array, what you can do is find the middle number in the array
-// Then separate it into a set. Compare the last value the from the set, then check if it's greater or equal to the number
-// If its greater, then you can discard from the search the entire set since it a sorted array, the preceding numbers are
-// expected to be lower, then do the same process.
 
 // 1st Solution - Time complexity O(N) - Linear Search
 // function search(arr, val){
@@ -19,6 +14,17 @@
 
 
 // 2nd Solution - Time complexity Log(N) - Binary Search!
+// Pseudocode
+// - This function accepts a sorted array and a value
+// - Create a left pointer at the start of the array, and a
+//  right pointer at the end of the array
+// - While the left pointer comes before the right pointer;
+//      - Create pointer in the middle
+//      - If you find the value you want, return the index
+//      - if the value is too small, move the left pointer up
+//      - if the value is too large, move the right pointer down
+// - If you never find the value, return -1
+
 function search(arr, val){
 
     let min = 0; // 
